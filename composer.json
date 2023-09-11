@@ -1,12 +1,12 @@
 {
-    "name": "swooletw/hyperf-packages",
+    "name": "swooletw/hyperf-router",
     "type": "library",
-    "description": "The pakcages for Hyperf maintained by SwooleTW.",
+    "description": "The router package for Hyperf.",
     "license": "MIT",
     "keywords": [
         "php",
         "hyperf",
-        "packages",
+        "router",
         "swoole"
     ],
     "authors": [
@@ -22,39 +22,16 @@
     },
     "autoload": {
         "psr-4": {
-            "SwooleTW\\Hyperf\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "SwooleTW\\Hyperf\\Tests\\": "tests/"
-        }
+            "SwooleTW\\Hyperf\\Router\\": "src/"
+        },
+        "files": [
+            "src/Functions.php"
+        ]
     },
     "require": {
         "php": "^8.1",
-        "hyperf/context": "^3.1",
-        "hyperf/di": "^3.1",
-        "hyperf/redis": "^3.1",
-        "swooletw/hyperf-auth": "@dev",
-        "swooletw/hyperf-cache": "@dev",
-        "swooletw/hyperf-container": "@dev",
-        "swooletw/hyperf-cookie": "@dev",
-        "swooletw/hyperf-encryption": "@dev",
-        "swooletw/hyperf-foundation": "@dev",
-        "swooletw/hyperf-hashing": "@dev",
-        "swooletw/hyperf-jwt": "@dev",
-        "swooletw/hyperf-log": "@dev",
-        "swooletw/hyperf-routing": "@dev",
-        "swooletw/hyperf-sqlite": "@dev",
-        "swooletw/hyperf-support": "@dev"
-    },
-    "suggest": {
-        "doctrine/dbal": "Required to rename SQLite indexs (^3.5.1)."
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "dev-master",
-        "mockery/mockery": "^1.5.1",
-        "phpunit/phpunit": "^10.0.7"
+        "hyperf/http-server": "^3.1",
+        "hyperf/context": "^3.1"
     },
     "config": {
         "sort-packages": true
@@ -63,15 +40,5 @@
         "branch-alias": {
             "dev-main": "3.1-dev"
         }
-    },
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "src/*",
-            "options": {
-                "symlink": true
-            }
-        }
-    ]
+    }
 }
