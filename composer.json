@@ -34,8 +34,8 @@
         "hyperf/http-server": "^3.1"
     },
     "suggest": {
-        "hyperf/http-message": "Required to use throttle requests middleware. (^3.1)",
-        "swooletw/hyperf-cache": "Required to use throttle requests middleware"
+        "swooletw/hyperf-cache": "Required to use throttle requests middleware.",
+        "swooletw/hyperf-http-message": "Required to use throttle requests middleware."
     },
     "config": {
         "sort-packages": true
